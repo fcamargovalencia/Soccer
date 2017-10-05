@@ -1,5 +1,6 @@
 ﻿namespace Soccer.Domain
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -16,5 +17,7 @@
 
         [DataType(DataType.ImageUrl)]
         public string Logo { get; set; }
+
+        public virtual ICollection<Team> Teams { get; set; }
     }
 }
